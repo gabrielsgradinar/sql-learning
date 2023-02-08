@@ -5,10 +5,11 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
+      POSTGRES_DB: dvdrental
     ports:
       - "5432:5432"
     volumes:
-        - local_pgdata:/var/lib/postgresql/data
+      - local_pgdata:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin4_container
